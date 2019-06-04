@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+<div>
+  <form method="POST" action="/sim">
+      <p><h1>Simulate</h1></p>
+      <ul>
+        <li>
+          <label><strong>Enable center of mass trajectories</strong></label>
+          <input name="avg" type="checkbox"/>
+        </li>
+        <li>
+          <label><strong> Start parameters:</strong></label> <br>
+          <label>Velocity: </label><input name="vel" type="number" style="width: 50px" min=0.0000000001 step="any" value="1"/> 
+          <label>Spring length: </label><input name="len" type="number" style="width: 50px" min=0.0000000001 step="any"  value="1"/>
+        </li>
+        <li>
+          <label><strong> Body parameters:</strong></label> <br>
+          <label>Masses:</label>
+          <input name="m1" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+          <input name="m2" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+          <input name="m3" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+          <label>Stiffnesses: </label>
+          <input name="k1" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+          <input name="k2" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+          <input name="k3" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+        </li>
+        <li>
+          <label><strong>Intergration parameters:</strong></label> <br>
+          <label>Final time:</label>
+          <input name="fint" type="number" style="width: 50px" min=0.0000000001 step="any" value="30" />
+          <label>Time step: </label>
+          <input name="stpt" type="number" style="width: 50px" min=0.0000000001 step="any" value="0.01" />
+        </li>
+        <br>
+        <li>
+         <input type="submit" value="Simulate"/>
+        </li>
+      </ul>
+  </form>
+</div>
+</body>
+</html>

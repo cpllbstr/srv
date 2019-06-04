@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div>
+        <form method="POST" action="/3d">
+            <p>
+                <h1>Calculate 3D point cloud</h1>
+            </p>
+            <ul>
+                <li>
+                    <label><strong>Select what to variate</strong></label><br>
+                    <input name="variate" type="radio" value="m" checked/> Masses <br>
+                    <input name="variate" type="radio" value="k"/> Stiffnesses <br>
+                </li>
+                <li>
+                    <label><strong> Start parameters:</strong></label> <br>
+                    <label>Velocity: </label><input name="vel" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                    <label>Spring length: </label><input name="len" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                </li>
+                <li>
+                    <label><strong>Integration parameters:</strong></label> <br>
+                    <label>Start mass: </label><input name="strm" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                    <label>Final mass: </label><input name="finm" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                    <label>Grid step: </label><input name="grds" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                    <label>Final time: </label><input name="fint" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                </li>
+                <br>
+                <li>
+                    <input type="submit" value="Calculate" />
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>

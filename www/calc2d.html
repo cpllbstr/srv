@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div>
+        <form method="POST" action="/2d">
+            <p>
+                <h1>Calculate 2D slice</h1>
+            </p>
+            <ul>
+                <li>
+                    <label><strong>Select what to variate</strong></label>
+                    <select name="var1">
+                            <option selected disabled>---</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                            <option value="M3">M3</option>
+                            <option value="K1">K1</option>
+                            <option value="K2">K2</option>
+                            <option value="K3">K3</option>
+                    </select>
+                    <select name="var2">
+                            <option selected disabled>---</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                            <option value="M3">M3</option>
+                            <option value="K1">K1</option>
+                            <option value="K2">K2</option>
+                            <option value="K3">K3</option>
+                    </select>
+                </li>
+                <li>
+                    <label><strong> Start parameters:</strong></label> <br>
+                    <label>Velocity: </label><input name="vel" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                    <label>Spring length: </label><input name="len" type="number" style="width: 50px" min=0.0000000001
+                        step="any" value="1" />
+                </li>
+                <li>
+                    <label><strong>Integration parameters:</strong></label> <br>
+                    <label>Start mass: </label><input name="strm" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+                    <label>Final mass: </label><input name="finm" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+                    <label>Grid step: </label><input name="grds" type="number" style="width: 50px" min=0.0000000001 step="any" value="1" />
+                    <label>Final time: </label><input name="fint" type="number" style="width: 50px" min=0.0000000001 step="any"
+                        value="1" />
+                </li>
+                <br>
+                <li>
+                    <input type="submit" value="Calculate" />
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
