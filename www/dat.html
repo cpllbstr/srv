@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <div>
+        <p><h2>Simulation results</h1></p>
+        <hr>
+        {{ range $key, $value := . }}
+            <li>
+                {{ $key }}
+                {{if $value }}
+                    <form method="POST" action="/dat">
+                        <input name="file" type="hidden" value="{{ $key }}"><input type="submit"  value="Download">
+                    </form>
+                {{else}}
+                    <strong>File in progress...</strong>
+                {{end}}
+            </li>
+        {{ end }}
+    </div>
+    <a href="/">Back to menu</a>
+</body>
+</html>
